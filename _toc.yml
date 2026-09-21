@@ -1,0 +1,19 @@
+format: jb-book
+root: intro
+options:
+  numbered: false
+chapters:
+  - file: foundations
+    title: 1 · BSM & Risk-neutral
+  - file: greeks
+    title: 2 · The Five Greeks
+  - file: calendar-structure
+    title: 3 · Calendar & VRP
+  - file: experiment
+    title: 4 · Experimental Setup
+  - file: results
+    title: 5 · Results & Discussion
+  - file: appendix-net-vega
+    title: Appendix · Net Vega
+  - file: glossary
+    title: อภิธานศัพท์

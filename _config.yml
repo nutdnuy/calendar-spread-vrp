@@ -1,0 +1,9 @@
+title: Calendar Spread under VRP
+author: Triphop Mahithitarmmatorn
+language: th
+logo: assets/images/quantcorner-horizontal-transparent-offwhite-1024.png
+logo_secondary: assets/images/quantsera-horizontal-transparent-offwhite-1024.png
+logo_alt: QuantCorner / Quantsera บนพื้นหลังสีดำ
+repository:
+  url: https://github.com/nutdnuy/calendar-spread-vrp
+  branch: main

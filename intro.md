@@ -9,7 +9,7 @@ description: วิเคราะห์ Delta, Gamma, Theta, Vega และ Rho
 
 <div class="regime-map" aria-label="สองระบอบ Volatility Risk Premium"><div><span>IV &gt; RV</span><strong>Theta-led</strong><p>รายได้จาก time decay เด่นขึ้นภายใต้สมมติฐานของแบบจำลอง</p></div><div><span>RV &gt; IV</span><strong>Gamma-led</strong><p>การเคลื่อนไหวของราคาและ convexity มีบทบาทมากขึ้น</p></div></div>
 
-<div class="welcome-preparation"><h3>กรอบการอ่าน</h3><p>ผลในเว็บเป็นการวิเคราะห์เชิงแบบจำลองจากพารามิเตอร์และการจำลองที่ระบุไว้ ไม่ใช่ผลตอบแทนตลาดจริง การเพิ่มจำนวนเส้นทางจำลองลด sampling error แต่ไม่ยืนยันว่าแบบจำลองตรงกับตลาด</p></div>
+<div class="welcome-preparation"><h2>กรอบการอ่าน</h2><p>ผลในเว็บเป็นการวิเคราะห์เชิงแบบจำลองจากพารามิเตอร์และการจำลองที่ระบุไว้ ไม่ใช่ผลตอบแทนตลาดจริง การเพิ่มจำนวนเส้นทางจำลองลด sampling error แต่ไม่ยืนยันว่าแบบจำลองตรงกับตลาด</p></div>
 
 <h2 id="lessons">บทเรียน 5 ตอน</h2>
 

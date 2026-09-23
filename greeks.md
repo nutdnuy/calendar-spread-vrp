@@ -8,8 +8,6 @@ inline_math: true
 
 <p class="lead">อ่านค่าความไวทั้งห้าเป็นภาษาของทิศทาง ความโค้ง เวลา ความผันผวน และอัตราดอกเบี้ย</p>
 
-<div class="paper-note">เนื้อหานี้นำเข้าจากต้นฉบับ LaTeX ของ Triphop Mahithitarmmatorn และจัดรูปแบบใหม่สำหรับการอ่านบนเว็บ สมการ ตาราง รูป และข้อสรุปยังอ้างอิงต้นฉบับเดิม</div>
-
 ## ระเบียบวิธีวิจัย (Methodology)
 
 ### การนิยามค่ากรีก
@@ -63,7 +61,7 @@ inline_math: true
 
 <figure class="source-figure" id="fig:delta" data-latex-placement="H">
 <img src="assets/images/source-figures/fig5_delta.png" alt="Delta ของ Call option เทียบกับราคาอ้างอิงที่อายุสัญญาต่างกัน" />
-<figcaption>Delta (<span class="math inline"><em>Δ</em></span>) ของออปชั่น Call เทียบกับราคาสินทรัพย์อ้างอิง ที่อายุสัญญาต่างกัน (<span class="math inline"><em>σ</em> = 20%</span>)</figcaption>
+<figcaption><strong>รูปที่ 2.</strong> Delta (<span class="math inline"><em>Δ</em></span>) ของออปชั่น Call เทียบกับราคาสินทรัพย์อ้างอิง ที่อายุสัญญาต่างกัน (<span class="math inline"><em>σ</em> = 20%</span>)</figcaption>
 </figure>
 
 #### Gamma ($\Gamma$)
@@ -111,7 +109,7 @@ inline_math: true
     \quad &\text{(แปรผกผันกับ } \sqrt{T}\text{)}, \label{eq:gamma_inv_T} \\
   \Gamma &\propto \frac{1}{S}
     \quad &\text{(แปรผกผันกับ } S \text{ โดยประมาณ)}. \label{eq:gamma_inv_S}
-\end{align}$$ กล่าวคือความผันผวนที่สูง $\sigma$ ทำให้ $\Gamma$ ต่ำลงที่ ATM (กราฟ $\Gamma$ ราบเรียบขึ้นหรือมีลักษณะแบนราบแล้วมีส่วนหางที่ยกสูงขึ้นดังรูปที่ 8), และอายุสัญญาที่สุ้น $T$ ทำให้ $\Gamma$ พุ่งสูงมากที่ ATM
+\end{align}$$ กล่าวคือความผันผวนที่สูง $\sigma$ ทำให้ $\Gamma$ ต่ำลงที่ ATM (กราฟ $\Gamma$ ราบเรียบขึ้นหรือมีลักษณะแบนราบแล้วมีส่วนหางที่ยกสูงขึ้นดัง[รูปที่ 8](results.html#fig:gamma_vol)), และอายุสัญญาที่สั้น $T$ ทำให้ $\Gamma$ พุ่งสูงมากที่ ATM
 
 #### Theta ($\Theta$)
 
@@ -160,9 +158,9 @@ inline_math: true
     \quad &\text{(แปรผันตรงกับ } \sigma \text{ โดยประมาณ)}, \label{eq:theta_prop_sig} \\
   |\Theta| &\propto S
     \quad &\text{(แปรผันตรงกับ } S\text{)}. \label{eq:theta_prop_S}
-\end{align}$$ ความสัมพันธ์ [eq:theta_prop_sig] เป็นเส้นตรงโดยประมาณในช่วง $\sigma \in [5\%, 80\%]$ เนื่องจาก $N'(d_1)$ แทบไม่เปลี่ยนแปลง สำหรับ ATM ที่ $\sigma$ ไม่สูงเกินไป แต่เมื่อ $\sigma$ สูงมาก ($\sigma \gtrsim 150\%$) ค่า $N'(d_1)$ จะลดลงตามการเพิ่มของ $d_1$ ทำให้ความสัมพันธ์โค้งกลับ (non-linear) ดังรูปที่ 6.
+\end{align}$$ ความสัมพันธ์ [eq:theta_prop_sig] เป็นเพียงการประมาณเมื่อ $N'(d_1)$ เปลี่ยนเล็กน้อย หาก $\sigma$ หรืออายุสัญญาสูงขึ้น พจน์นี้อาจเปลี่ยนมากจนความสัมพันธ์ไม่เป็นเส้นตรง จึงไม่มีระดับ $\sigma$ เดียวที่ใช้เป็นเกณฑ์ได้กับทุกอายุสัญญา.
 
-ผลรวมจาก [eq:theta_inv_T] และ [eq:theta_prop_sig]: อายุสัญญาที่สั้นกับความผันผวนที่สูงนำไปสู่ $|\Theta|$ สูงสุดดังที่สังเกตได้จากรูปที่ 5 ที่เส้น $\sigma=50\%$ มี $|\Theta|$ สูงที่สุดและพุ่งแรงที่สุดเมื่อใกล้หมดอายุ.
+ผลรวมจาก [eq:theta_inv_T] และ [eq:theta_prop_sig]: อายุสัญญาที่สั้นกับความผันผวนที่สูงนำไปสู่ $|\Theta|$ สูงสุดดังที่สังเกตได้จาก[รูปที่ 6](results.html#fig:theta_vol) ที่เส้น $\sigma=50\%$ มี $|\Theta|$ สูงที่สุดและพุ่งแรงที่สุดเมื่อใกล้หมดอายุ.
 
 #### Vega ($\nu$)
 
@@ -197,7 +195,7 @@ inline_math: true
 </tbody>
 </table>
 
-$\nu$ แปรผันตรงกับรากที่สองของเวลา ($\nu \propto \sqrt{T}$) ดังนั้นขา LONG ที่มีอายุยาวกว่าจะมี Vega สูงกว่าขา SHORT เสมอ: $$\begin{equation}
+สูตร Vega มีพจน์ $\sqrt{T}$ แต่ $N'(d_1)$ ก็ขึ้นกับเวลาและพารามิเตอร์อื่นด้วย จึงเป็นความสัมพันธ์โดยประมาณเมื่อพจน์นี้เปลี่ยนเล็กน้อย สำหรับพารามิเตอร์ตัวอย่างใกล้ ATM ขา LONG มี Vega สูงกว่าขา SHORT: $$\begin{equation}
   \nu_{\text{LONG}} > \nu_{\text{SHORT}}.
   \label{eq:vega_ineq}
 \end{equation}$$
@@ -215,7 +213,7 @@ $\nu$ แปรผันตรงกับรากที่สองของ�
 
 <figure class="source-figure" id="fig:vega" data-latex-placement="H">
 <img src="assets/images/source-figures/fig6_vega.png" alt="Vega เทียบกับราคาอ้างอิงที่อายุสัญญาต่างกัน" />
-<figcaption>Vega (<span class="math inline"><em>ν</em></span>) เทียบกับราคาสินทรัพย์อ้างอิง ที่อายุสัญญาต่างกัน (<span class="math inline"><em>σ</em> = 20%</span>)</figcaption>
+<figcaption><strong>รูปที่ 3.</strong> Vega (<span class="math inline"><em>ν</em></span>) เทียบกับราคาสินทรัพย์อ้างอิง ที่อายุสัญญาต่างกัน (<span class="math inline"><em>σ</em> = 20%</span>)</figcaption>
 </figure>
 
 #### Rho ($\rho$)

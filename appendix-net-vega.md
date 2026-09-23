@@ -8,11 +8,9 @@ inline_math: true
 
 <p class="lead">โค้ดอ้างอิงสำหรับตรวจค่า Vega ของแต่ละขาและ Net Vega ในตารางผลการศึกษา</p>
 
-<div class="paper-note">เนื้อหานี้นำเข้าจากต้นฉบับ LaTeX ของ Triphop Mahithitarmmatorn และจัดรูปแบบใหม่สำหรับการอ่านบนเว็บ สมการ ตาราง รูป และข้อสรุปยังอ้างอิงต้นฉบับเดิม</div>
-
 ## โค้ดสำหรับคำนวณ Net Vega
 
-โค้ดภาษา Python ต่อไปนี้ใช้คำนวณค่า Vega ของแต่ละขาและ $\nu_{net}$ ที่แสดงในตารางที่ 9 โดยอาศัยสูตร Vega ของแบบจำลองแบล็ก-โชลส์ $\nu = S\sqrt{T}\,N'(d_1)$ ต้องการเพียงไลบรารี `numpy` เท่านั้น:
+โค้ดภาษา Python ต่อไปนี้ใช้คำนวณค่า Vega ของแต่ละขาและ $\nu_{net}$ ที่แสดงใน[ตารางที่ 9](results.html#tab:net_vega) โดยอาศัยสูตร Vega ของแบบจำลองแบล็ก-โชลส์ $\nu = S\sqrt{T}\,N'(d_1)$ ต้องการเพียงไลบรารี `numpy` เท่านั้น:
 
     import numpy as np
 
@@ -35,15 +33,15 @@ inline_math: true
         print(K, round(v_long, 2), round(v_short, 2),
               round(v_long - v_short, 2))
 
-### References
+## References
+
+Options Industry Council. “[Long Call Calendar Spread (Call Horizontal)](https://www.optionseducation.org/strategies/all-strategies/long-call-calendar-spread-call-horizontal).” คำอธิบายโครงสร้าง ผลของ IV และ time decay.
 
 Black, Fischer. 1976. “The Pricing of Commodity Contracts.” *Journal of Financial Economics* 3 (1–2): 167–79.
 
 Black, Fischer, and Myron Scholes. 1973. “The Pricing of Options and Corporate Liabilities.” *Journal of Political Economy* 81 (3): 637–54.
 
-Cahill, M. 2020. “Rolling Calendar Spreads: A Systematic Approach to Selling Time Value.” *Journal of Derivatives* 27 (4): 58–71.
-
-Carr, Peter, and Liuren Wu. 2009. “Variance Risk Premiums.” *Review of Financial Studies* 22 (3): 1311–41.
+Carr, Peter, and Liuren Wu. 2009. “[Variance Risk Premiums](https://doi.org/10.1093/rfs/hhn038).” *Review of Financial Studies* 22 (3): 1311–41.
 
 Harrison, J. Michael, and Stanley R. Pliska. 1981. “Martingales and Stochastic Integrals in the Theory of Continuous Trading.” *Stochastic Processes and Their Applications* 11 (3): 215–60.
 
@@ -51,4 +49,4 @@ Hull, John C. 2018. *Options, Futures, and Other Derivatives*. 10th ed. Pearson 
 
 Merton, Robert C. 1973. “Theory of Rational Option Pricing.” *Bell Journal of Economics and Management Science* 4 (1): 141–83.
 
-Natenberg, Sheldon. 1994. *Option Volatility and Pricing: Advanced Trading Strategies and Techniques*. 2nd ed. McGraw-Hill.
+Natenberg, Sheldon. 1994. *Option Volatility and Pricing: Advanced Trading Strategies and Techniques*. McGraw-Hill.

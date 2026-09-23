@@ -6,7 +6,7 @@ description: คำศัพท์สำคัญใน Calendar Spread แล�
 # อภิธานศัพท์
 
 <section class="glossary-group" data-glossary-group="greeks">
-## Greeks & volatility
+<h2>Greeks &amp; volatility</h2>
 <section class="glossary-term" id="volatility-risk-premium"><h3>Volatility Risk Premium (VRP)</h3><p>ส่วนต่างระหว่าง Implied Volatility กับ Realized Volatility ภายใต้กรอบและช่วงเวลาที่ระบุ</p></section>
 <section class="glossary-term" id="calendar-spread"><h3>Calendar Spread</h3><p>กลยุทธ์ออปชันสองขาที่ใช้ Strike เดียวกันแต่มีวันหมดอายุต่างกัน</p></section>
 <section class="glossary-term" id="delta"><h3>Delta (Δ)</h3><p>ความไวอันดับหนึ่งของราคาออปชันต่อราคาสินทรัพย์อ้างอิง</p></section>

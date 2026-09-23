@@ -21,6 +21,8 @@ description: วิเคราะห์ Delta, Gamma, Theta, Vega และ Rho
 <article class="welcome-lesson"><span class="welcome-lesson-number">05</span><div><p class="welcome-lesson-label">อ่านผลด้วย Theta–Gamma trade-off</p><h3><a href="results.html">Results & Discussion</a></h3><p>อายุสัญญา ความผันผวน Moneyness และผลรวมของค่ากรีกในแต่ละระบอบ</p><p class="welcome-topics">Theta · Gamma · Vega · Rolling risk</p><a class="welcome-text-link" href="results.html">อ่านตอนนี้ →</a></div></article>
 </div>
 
+<div class="viz-directory"><h2>Interactive labs · ทดลองได้ 5 ชุด</h2><p>ปรับพารามิเตอร์ ดูกราฟ และอ่านผลคำนวณจากสถานการณ์สมมติ</p><ul><li><a href="greeks.html#calendar-greeks-lab">Calendar Greek explorer</a></li><li><a href="calendar-structure.html#expiry-lab">ทดลองกำไรขาดทุน ณ วันหมดอายุขาสั้น</a></li><li><a href="calendar-structure.html#decay-lab">ทดลองผลของเวลาที่ผ่านไป</a></li><li><a href="results.html#iv-shift-lab">ทดลอง IV shock แยกแต่ละขา</a></li><li><a href="experiment.html#carry-lab">ทดลอง Theta–Gamma หลัง Delta hedge</a></li></ul></div>
+
 <!-- author-profile -->
 
 <div class="welcome-resources"><h3>ต้นฉบับ</h3><p>เรียบเรียงจากบทความ “การวิเคราะห์ค่ากรีกในกลยุทธ์ Calendar Spread ภายใต้สภาวะ Volatility Risk Premium” โดย Triphop Mahithitarmmatorn</p><div class="welcome-download"><a href="foundations.md" download>ดาวน์โหลด Markdown ตอนแรก</a></div></div>

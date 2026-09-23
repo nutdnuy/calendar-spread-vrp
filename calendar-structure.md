@@ -55,3 +55,13 @@ Long Calendar Spread ประกอบด้วยการซื้อออ�
   \Theta_{\text{net}} &= \Theta_{\text{LONG}} - \Theta_{\text{SHORT}} > 0, \\
   \nu_{\text{net}}    &= \nu_{\text{LONG}}    - \nu_{\text{SHORT}}    > 0.
 \end{align}$$
+
+
+## ทดลองกำไรขาดทุน ณ วันหมดอายุขาสั้น
+
+<div id="expiry-lab" class="interactive-mount"><p>เปิด JavaScript เพื่อปรับค่าห้องทดลองนี้ สมการและตัวอย่างในบทอ่านได้ตามปกติ</p></div>
+
+
+## ทดลองผลของเวลาที่ผ่านไป
+
+<div id="decay-lab" class="interactive-mount"><p>เปิด JavaScript เพื่อปรับค่าห้องทดลองนี้ สมการและตัวอย่างในบทอ่านได้ตามปกติ</p></div>

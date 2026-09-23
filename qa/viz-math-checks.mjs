@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import {calendarNetGreeks} from '../src/math.mjs';
+import {callPrice,spreadValue,expiryPnl,ivShift,hedgeCarry} from '../src/viz-math.mjs';
+const close=(a,b,t=1e-8)=>assert.ok(Math.abs(a-b)<t,`${a} != ${b}`);
+close(callPrice({spot:100,strike:100,rate:.05,vol:.2,time:1}),10.45058357,2e-5);
+close(callPrice({spot:110,strike:100,rate:.02,vol:.2,time:0}),10);
+close(callPrice({spot:100,strike:100,rate:.05,vol:0,time:1}),100-100*Math.exp(-.05));
+close(spreadValue({elapsed:30,spot:110}).short,10);
+const expiry=expiryPnl({terminal:100});
+close(expiry.pnl,callPrice({spot:100,strike:100,rate:.02,vol:.2,time:150/365})-expiry.debit*Math.exp(.02*30/365));
+assert.ok(expiryPnl({residualVol:.3}).pnl>expiryPnl({residualVol:.1}).pnl);
+close(ivShift({}).exact,0);close(ivShift({}).linear,0);
+const tiny=ivShift({longShift:1e-5,shortShift:-1e-5});close(tiny.exact,tiny.linear,2e-8);
+assert.ok(ivShift({longShift:.01}).exact>0);assert.ok(ivShift({shortShift:.01}).exact<0);
+close(hedgeCarry({iv:.2,rv:.2}).total,0);
+assert.ok(hedgeCarry({iv:.25,rv:.15}).total>0);assert.ok(hedgeCarry({iv:.15,rv:.25}).total<0);
+// PDE identity: a centered elapsed-time difference estimates Theta; deduct financing.
+const initial=spreadValue({}).net,dt=1e-3;
+const thetaDay=(spreadValue({elapsed:dt}).net-initial)/dt;
+const delta=calendarNetGreeks({spot:100,strike:100,rate:.02,shortVol:.2,longVol:.2,shortTime:30/365,longTime:180/365}).delta;
+close(thetaDay+.02*100*delta/365-.02*initial/365,hedgeCarry({rv:0}).carry,2e-6);
+for(const spot of [80,100,120])for(const elapsed of [0,15,30])assert.ok(Object.values(spreadValue({spot,elapsed})).every(Number.isFinite));
+assert.throws(()=>spreadValue({shortDays:180,longDays:30}),/Invalid/);
+console.log('New Calendar labs: price benchmark, settlement, financing, Vega sensitivity and hedged carry passed.');

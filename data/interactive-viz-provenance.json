@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-23",
+  "route": "no-image-generator",
+  "data": "All examples are hypothetical model calculations; no market data or random sampling.",
+  "units": "Prices per one underlying unit; time in years with 365 days; UI volatility and rates in %, internal decimals; IV shifts in percentage points.",
+  "labs": [
+    {
+      "url": "calendar-structure.html#expiry-lab",
+      "title": "Expiry P&L",
+      "method": "Long European far Call less short near Call, settle near leg intrinsically, reprice far leg with residual IV; subtract initial debit grown at r until near expiry."
+    },
+    {
+      "url": "calendar-structure.html#decay-lab",
+      "title": "Time decay",
+      "method": "Spot and each IV fixed for all elapsed days 0..30; 30/180-day European Call legs; financed P&L at each point. This is a conditional scenario, not an expected path."
+    },
+    {
+      "url": "results.html#iv-shift-lab",
+      "title": "Separate IV shifts",
+      "method": "Exact BSM repricing versus first-order vegaLong*dIVLong-vegaShort*dIVShort, instantaneous shock at fixed spot and remaining maturity."
+    },
+    {
+      "url": "experiment.html#carry-lab",
+      "title": "Local hedged carry",
+      "method": "One-day local P&L: 0.5*GammaNet*S^2*(RV^2-IV^2)/365. Continuous Delta hedge with stock and option financing, fixed common IV, no transaction costs/jumps/IV shocks. Gamma frozen locally."
+    }
+  ],
+  "sources": [
+    "Existing lesson equations and independent algebraic/benchmark tests.",
+    "https://www.optionseducation.org/strategies/all-strategies/long-call-calendar-spread-call-horizontal"
+  ],
+  "implementation": "Original implementation. No upstream source code copied. Existing React, KaTeX, SVG chart controls and locally bundled fonts reused.",
+  "verification": [
+    "qa/viz-math-checks.mjs",
+    "qa/viz-browser-checks.cjs",
+    "npm run build:pages",
+    "npm run check:site"
+  ]
+}
